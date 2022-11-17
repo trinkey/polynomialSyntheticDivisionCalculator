@@ -23,12 +23,12 @@ while True:
         
         for i in range(amount - 2):
             if output:
-                if outputs[i]: output += "+ " + str(outputs[i]) + "x^" + str(amount - 1 - i) + " "
+                if outputs[i]: output += "+ " + str(outputs[i] if outputs[i] != 1 else "") + "x^" + str(amount - 1 - i) + " "
             else:
-                if outputs[i]: output += str(outputs[i]) + "x^" + str(amount - 1 - i) + " "
+                if outputs[i]: output += str(outputs[i] if outputs[i] != 1 else "") + "x^" + str(amount - 1 - i) + " "
         
         if outputs[amount - 2]:
-            if output: output += "+ " + str(outputs[amount - 2]) + "x "
+            if output: output += "+ " + str(outputs[amount - 2] if outputs[amount - 2] != 1 else "") + "x "
             else: output += str(outputs[amount - 2]) + "x "
         
         if outputs[amount - 1]:
